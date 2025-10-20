@@ -135,7 +135,7 @@
     "title": "تور آفرود",
     "fleetVehicle": "SUV",
     "price": 35000,
-    "availableSeats": 24,
+    "availableSeats": 22,
     "capacity": 250,
     "insurance": true,
     "options": [
@@ -159,7 +159,7 @@
     "title": "تور ایتالیا",
     "fleetVehicle": "airplane",
     "price": 18000,
-    "availableSeats": 16,
+    "availableSeats": 15,
     "capacity": 200,
     "insurance": true,
     "options": [

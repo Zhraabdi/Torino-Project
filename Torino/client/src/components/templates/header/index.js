@@ -20,7 +20,7 @@ function Header() {
       <div className="flex justify-between items-center mx-auto max-w[1440px] md:w-[1440px]">
         <div className="flex md:items-center md:gap-16">
           <Link href={"/"} className="hidden md:block">
-          <Image src={Logo} width={146} height={44} alt="torino-logo" priority className="w-[146px]" />
+          <Image src={Logo} width={146} height={44} alt="torino-logo" priority />
           </Link>
           <nav>
             <ul className="hidden md:flex gap-8">

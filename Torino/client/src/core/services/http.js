@@ -12,8 +12,6 @@ const serverFetch = async (
   if (endpoint) url += endpoint;
   if (query) url += `?${QueryString.stringify(query, { encode: false })}`;
 
-  console.log(url)
-
   try {
     console.log(url);
 

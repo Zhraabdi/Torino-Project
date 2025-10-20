@@ -12,6 +12,15 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="fa" dir="rtl" >
+      <head>
+        <link
+          rel="preload"
+          href="/fonts/YekanBakh-Bold.woff2"
+          as="font"
+          type="font/woff2"
+          crossOrigin="anonymous"
+        />
+      </head>
       <body >
         <TanstackQueryProvider>
           <Header />

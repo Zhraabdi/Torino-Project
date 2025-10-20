@@ -18,7 +18,6 @@ function AuthForm() {
   const [openDropMenu, setOpenDropMenu] = useState(false);
 
   const { data } = useGetUserData();
-  console.log(data);
 
   if (data?.data)
     return (
@@ -26,7 +25,7 @@ function AuthForm() {
         <button
           onClick={(e) => setOpenDropMenu(!openDropMenu)}
           className="flex justify-center items-center gap-2 md:px-4 md:py-2 text-primary font-medium text-lg">
-          <Image src={frame} alt="پروفایل"  width={24} height={24}  priorityclassName="h-[24px] w-[24px] mb-1"/>{" "}
+          <Image src={frame} alt="پروفایل"  width={24} height={24}  className="h-[24px] w-[24px] mb-1"/>{" "}
           <span>{data.data.mobile}</span>{" "}
           <Image src={arrow} alt="پروفایل کاربر" className="h-[24px] w-[24px] mb-1"/>
         </button>

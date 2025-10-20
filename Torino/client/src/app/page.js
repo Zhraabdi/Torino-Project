@@ -2,19 +2,15 @@ import HomePage from "@/components/templates/homePage";
 import { serverFetch } from "@/core/services/http";
 
 export default async function Home({ searchParams }) { 
-  console.log(searchParams);
-  console.log(process.env.NEXT_PUBLIC_BASE_URL);
+  const resolvedParams = await searchParams;
 
-
-  let params = { ...searchParams };
+  let params = { ...resolvedParams };
   if (params["date[startDate]"]) {
   params.startDate = params["date[startDate]"];
   params.endDate = params["date[endDate]"];
   delete params["date[startDate]"];
   delete params["date[endDate]"];
   }
-
-  console.log( params);
 
   const data = await serverFetch("tour", params, { cache: "no-store" });
 

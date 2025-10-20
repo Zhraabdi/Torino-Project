@@ -31,7 +31,10 @@ function Whytorino() {
                     </div>
                 </div>
                 <Swiper effect={"cards"} grabCursor={true} modules={[EffectCards]} className="mySwiper">
-               {Images.map((image,index)=>(<SwiperSlide key={index}><Image  src={image} height={500} width={400} alt="slide_photo" className="w-full h-auto rounded-xl object-cover"/> </SwiperSlide>))}
+               {Images.map((image,index)=>(<SwiperSlide key={index}><div className="relative w-[389px] h-[400px] md:w-[389px] md:h-[400px] rounded-xl overflow-hidden"> 
+               <Image src={image} alt="slide_photo" fill className="object-cover rounded-xl" sizes="(max-width: 768px) 300px, 389px"/>
+                </div>
+                </SwiperSlide>))}
                </Swiper>
                 </div>
                 </div>
