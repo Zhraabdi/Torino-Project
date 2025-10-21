@@ -1,10 +1,13 @@
 import {  useGetUserData } from "@/core/services/queries"
 import Image from "next/image"
 import Link from "next/link";
+import useAuthToken from "@/core/hook/useAuthToken";
+
 
 function Peyment({params:status}) {
     
-  const {data}=useGetUserData();
+  const { hasToken } = useAuthToken();
+  const {data}=useGetUserData(hasToken);
   console.log(data);
     
 if (status === "==success"){

@@ -9,12 +9,15 @@ import { useRouter } from "next/navigation";
 import { useEffect } from "react";
 import toast from "react-hot-toast";
 import { DatePicker } from "zaman";
+import useAuthToken from "@/core/hook/useAuthToken";
+
 
 import Calender from "../../../../public/icons/Calender";
 
 function CheckOut() {
 
-  const { data: user } = useGetUserData();
+  const { hasToken } = useAuthToken();
+  const { data: user } = useGetUserData(hasToken);
   const router = useRouter();
   const { data: basket } = useGetBasket();
   const { isPending: AccountInfoIsPending, mutate: AccountInfoMutate } = useUpdateAccountInfo();

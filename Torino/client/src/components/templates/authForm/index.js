@@ -10,6 +10,8 @@ import SendOtp from "./SendOtp";
 import Login from "../../../../public/icons/Login";
 import arrow from "../../../../public/icons/arrow-down.svg";
 import DropMenu from "../dropDownMenu";
+import useAuthToken from "@/core/hook/useAuthToken";
+
 
 function AuthForm() {
   const [isOpen, setIsOpen] = useState(false);
@@ -17,7 +19,8 @@ function AuthForm() {
   const [step, setStep] = useState(1);
   const [openDropMenu, setOpenDropMenu] = useState(false);
 
-  const { data } = useGetUserData();
+  const { hasToken } = useAuthToken();
+  const { data } = useGetUserData(hasToken);
 
   if (data?.data)
     return (

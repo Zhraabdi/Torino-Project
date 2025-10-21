@@ -2,11 +2,11 @@ import { useQuery } from "@tanstack/react-query";
 import QueryString from "qs";
 import api from "../config/api";
 
-const useGetUserData = () => {
+const useGetUserData = (enabled) => {
   const queryFn = () => api.get("user/profile");
   const queryKey = ["user-data"];
 
-  return useQuery({ queryFn, queryKey });
+  return useQuery({ queryFn, queryKey, enabled }); 
 };
 const useGetTours = (query) => {
   const url = "tour?" + QueryString.stringify(query);

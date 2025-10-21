@@ -87,7 +87,7 @@
     "title": "هولر",
     "fleetVehicle": "airplane",
     "price": 105000,
-    "availableSeats": 20,
+    "availableSeats": 17,
     "capacity": 30,
     "insurance": false,
     "options": [
@@ -159,7 +159,7 @@
     "title": "تور ایتالیا",
     "fleetVehicle": "airplane",
     "price": 18000,
-    "availableSeats": 15,
+    "availableSeats": 13,
     "capacity": 200,
     "insurance": true,
     "options": [
