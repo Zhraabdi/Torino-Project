@@ -40,6 +40,9 @@ npm run build
 npm start
 ```
 
+## 📸 Screenshots
+
+![Home Page](./HomePage.png)
 
 ```
 
