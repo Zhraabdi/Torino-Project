@@ -31,23 +31,25 @@ const flattenObject = (obj, prefix = "") => {
 const translateVehicle = (type) => {
   if (!type) return "نامشخص";
   const map = {
-    bus: "اتوبوس",
-    airplane: "هواپیما",
+    Bus: "اتوبوس",
+    Airplane: "هواپیما",
     train: "قطار",
     car: "خودرو",
     ship : "کشتی",
     SUV : "ماشین",
+    Van : "ون",
   };
   return map[type] || type;
 };
 const getVehicleIcon = (type) => {
   const icons = {
-    bus: "/icons/bus.svg",
+    Bus: "/icons/bus.svg",
     train: "/icons/train.svg",
-    airplane: "/icons/airplane.svg",
+    Airplane: "/icons/airplane.svg",
     ship: "/icons/ship.svg",
     car: "/icons/bus.svg",
     SUV : "/icons/bus.svg",
+    Van : "/icons/bus.svg",
   };
 
   return icons[type] || "/icons/default.svg";
